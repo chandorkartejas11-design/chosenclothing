@@ -1,11 +1,11 @@
 const products = [
-  {id:1,name:"240 GSM Oversized T-Shirt",price:600,cat:"tops",label:"Oversized",art:"tee"},
-  {id:2,name:"180 GSM Regular Fit T-Shirt",price:300,cat:"tops",label:"Regular Fit",art:"tee light"},
-  {id:3,name:"Premium Hoodie",price:700,cat:"layers",label:"Everyday Layer",art:"hoodie"},
-  {id:4,name:"Essential Jacket",price:700,cat:"layers",label:"Outerwear",art:"jacket"},
+  {id:1,name:"240 GSM Oversized T-Shirt",price:600,cat:"tops",label:"Oversized",art:"tee",image:"https://cdn.myikas.com/images/47c96b96-e7c0-4e88-bb4e-114530182c4e/08d4312c-14fe-4d91-ae25-e80eaef88fbc/3840/void3379.webp"},
+  {id:2,name:"180 GSM Regular Fit T-Shirt",price:300,cat:"tops",label:"Regular Fit",art:"tee light",image:"https://img01.ztat.net/article/spp-media-p1/6bc37e9c78394393ae48db8caed9c5e8/b7b052bba36f40eab368040ccf516599.jpg?imwidth=1800"},
+  {id:3,name:"Premium Hoodie",price:700,cat:"layers",label:"Everyday Layer",art:"hoodie",image:"https://5thave-img-cdn.beyondstyle.us/pf/e2d78f13-3202-37f0-9239-21c7daa3dedd.jpg?x-oss-process=style%2Fs1"},
+  {id:4,name:"Essential Jacket",price:700,cat:"layers",label:"Outerwear",art:"jacket",image:"https://immagini.drezzy.it/offerte-moda/862990038.jpg?code=638098297957604092"},
   {id:5,name:"Minimal Crop Top",price:300,cat:"tops",label:"Women's Edit",art:"crop"},
   {id:6,name:"Relaxed Joggers",price:650,cat:"bottoms",label:"Relaxed Fit",art:"pants"},
-  {id:7,name:"Everyday Jeans",price:650,cat:"bottoms",label:"Denim",art:"jeans"}
+  {id:7,name:"Everyday Jeans",price:650,cat:"bottoms",label:"Denim",art:"jeans",image:"https://down-id.img.susercontent.com/file/id-11134207-7rasf-m3m72k3u6b67de"}
 ];
 
 let cart = JSON.parse(localStorage.getItem("chosenCart") || "[]");
@@ -54,7 +54,7 @@ function renderCart(){
   const el=document.getElementById("cartItems");
   if(!cart.length){el.innerHTML='<p class="empty">Your bag is empty.</p>';}
   else el.innerHTML=cart.map(x=>`<div class="cart-row">
-    <div class="mini-art"><div class="garment ${x.art}"></div></div>
+    <div class="mini-art">${x.image ? `<img src="${x.image}" alt="${x.name}">` : `<div class="garment ${x.art}"></div>`}</div>
     <div class="cart-row-info"><strong>${x.name}</strong><small>${money(x.price)} × ${x.qty}</small><button class="remove" data-remove="${x.id}">Remove</button></div>
   </div>`).join("");
   el.querySelectorAll("[data-remove]").forEach(b=>b.addEventListener("click",()=>removeFromCart(+b.dataset.remove)));
