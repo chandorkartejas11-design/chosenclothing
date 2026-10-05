@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900">
+<defs>
+ <radialGradient id="g"><stop stop-color="#fff"/><stop offset=".55" stop-color="#f4f2ed"/><stop offset="1" stop-color="#d8d4cd"/></radialGradient>
+ <linearGradient id="shirt" x1="0" x2="1"><stop stop-color="#fafafa"/><stop offset=".5" stop-color="#e8e7e4"/><stop offset="1" stop-color="#c9c7c2"/></linearGradient>
+ <linearGradient id="denim" x1="0" x2="1"><stop stop-color="#9fa4a7"/><stop offset=".5" stop-color="#73797d"/><stop offset="1" stop-color="#b0b4b5"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<ellipse cx="355" cy="860" rx="170" ry="24" fill="#000" opacity=".13" filter="url(#shadow)"/>
+<ellipse cx="350" cy="330" rx="280" ry="320" fill="url(#g)" opacity=".7"/>
+<!-- faceless head -->
+<path d="M280 100 C290 45 410 45 425 105 L420 195 C410 235 385 258 350 260 C315 258 290 235 280 195Z" fill="#f8f8f6"/>
+<!-- neck -->
+<path d="M318 230 L382 230 L392 285 L308 285Z" fill="#eee"/>
+<!-- oversized t-shirt -->
+<path d="M235 270 L305 245 L350 275 L395 245 L465 270 L530 410 L455 445 L425 370 L425 560 L275 560 L275 370 L245 445 L170 410Z" fill="url(#shirt)"/>
+<path d="M305 245 Q350 300 395 245" fill="none" stroke="#c9c7c3" stroke-width="7"/>
+<text x="350" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="7" fill="#242424">CHOSEN</text>
+<!-- arms -->
+<path d="M235 285 L170 410 L198 430 L270 340Z" fill="#f1f1ef"/>
+<path d="M465 285 L530 410 L502 430 L430 340Z" fill="#f1f1ef"/>
+<!-- jeans -->
+<path d="M275 550 L425 550 L450 730 L382 850 L345 850 L350 650 L355 850 L318 850 L250 730Z" fill="url(#denim)"/>
+<path d="M350 650 L350 845" stroke="#5f6468" stroke-width="6" opacity=".5"/>
+<!-- sneakers -->
+<path d="M318 840 L350 840 L365 875 L290 875 Q285 855 318 840Z" fill="#fafafa"/>
+<path d="M382 840 L350 840 L335 875 L410 875 Q415 855 382 840Z" fill="#fafafa"/>
+</svg>
