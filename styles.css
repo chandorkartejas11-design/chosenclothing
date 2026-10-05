@@ -26,3 +26,20 @@ footer{background:#171716;color:#eee;padding:65px 38px 25px}.footer-top{max-widt
   .nav{padding:0 20px}.nav-links{display:none}.menu-button{display:block}.hero{grid-template-columns:1fr;min-height:760px}.hero-copy{padding:75px 25px 40px}.hero-visual{min-height:430px}.model-art{height:95%;width:58%}.products{grid-template-columns:repeat(2,1fr)}.section,.editorial{padding-left:20px;padding-right:20px}.section-head{display:block}.filters{margin-top:25px;overflow:auto;padding-bottom:5px}.editorial-main{grid-template-columns:1fr}.editorial-copy{padding:45px 30px}.editorial-copy h2{font-size:48px}.editorial-art{min-height:430px}.editorial-grid{grid-template-columns:1fr}.manifesto{padding:90px 20px}.manifesto h2{font-size:52px}.manifesto-stats{gap:25px;flex-wrap:wrap}.newsletter{margin:0 20px;padding:45px 28px;display:block}.newsletter h2{font-size:40px}.newsletter form{width:100%;margin-top:30px;display:block}.newsletter input{width:100%;margin-bottom:10px}.newsletter .button{width:100%}.footer-top{grid-template-columns:1fr 1fr}.footer-top>div:first-child{grid-column:1/-1}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:8px}
 }
 @media(max-width:520px){.announcement{font-size:8px}.hero-copy h1{font-size:55px}.products{gap:8px}.product-image{border-radius:14px}.section-head h2{font-size:42px}.editorial-main{border-radius:18px}.editorial-art{min-height:360px}.tile{min-height:220px}.tile strong{font-size:27px}}
+
+
+/* Reference-style CHOSEN hero */
+.hero-reference{position:relative;display:block;min-height:760px;background:#f4f1ec;overflow:hidden;border:1px solid #171716;border-radius:0 0 30px 30px}
+.hero-reference-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0}
+.hero-reference .hero-copy{position:absolute;left:0;top:0;width:42%;height:100%;z-index:2;background:transparent;padding:0 0 80px 5vw;justify-content:flex-end}
+.hero-reference .hero-copy .eyebrow{display:none}
+.hero-reference .hero-text{max-width:390px;margin:18px 0;color:#57534d}
+.hero-reference .hero-cta{margin-top:4px}
+.hero-reference .hero-visual{display:none}
+
+@media(max-width:900px){
+  .hero-reference{min-height:690px;border-radius:0 0 22px 22px}
+  .hero-reference-image{object-position:58% top}
+  .hero-reference .hero-copy{width:100%;height:auto;bottom:0;top:auto;padding:180px 24px 34px;justify-content:flex-end;background:linear-gradient(transparent,rgba(244,241,236,.94) 72%)}
+  .hero-reference .hero-text{font-size:12px;max-width:320px}
+}

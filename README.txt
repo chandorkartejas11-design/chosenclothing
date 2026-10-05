@@ -29,3 +29,7 @@ For a real public website, upload the three files to any static host such as you
 
 ## Before launch
 Replace the CSS garment placeholders with your actual product photography, add your real logo/social links, connect a payment gateway and order backend, and add shipping/returns/privacy pages.
+
+
+## Hero visual
+The homepage now uses the premium reference-style CHOSEN hero image at `assets/chosen-home-hero.png`.
