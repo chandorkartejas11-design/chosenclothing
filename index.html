@@ -1,153 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chosen Clothing — premium everyday essentials, oversized silhouettes and elevated streetwear." />
-  <title>CHOSEN — Premium Everyday Wear</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CHOSEN CLOTHING — premium oversized essentials, streetwear and everyday pieces.">
+<title>CHOSEN CLOTHING — Wear Your Own Way</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹1,499 <span>•</span> EASY RETURNS</div>
+<div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹1,499 <span>•</span> EASY RETURNS</div>
+<header class="site-shell">
+<nav class="nav">
+<a class="brand" href="#home">CHOSEN<span>®</span></a>
+<div class="nav-links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="nav-actions"><button id="searchBtn" aria-label="Search">⌕</button><button aria-label="Account">◯</button><button id="cartBtn" class="cart-button">Bag <b id="cartCount">0</b></button><button id="menuBtn" class="menu-button">☰</button></div>
+</nav>
+</header>
 
-  <header class="nav-wrap">
-    <nav class="nav">
-      <a class="brand" href="#home">CHOSEN<span>®</span></a>
-      <div class="nav-links">
-        <a href="#shop">Shop</a>
-        <a href="#collections">Collections</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-actions">
-        <button aria-label="Search" id="searchBtn">⌕</button>
-        <button aria-label="Account">◯</button>
-        <button aria-label="Cart" id="cartBtn" class="cart-button">Bag <b id="cartCount">0</b></button>
-        <button class="menu-button" id="menuBtn" aria-label="Menu">☰</button>
-      </div>
-    </nav>
-  </header>
+<main class="site-shell" id="home">
+<section class="aura-hero">
+<div class="hero-type">
+<p class="hero-kicker">CHOSEN / NEW COLLECTION 2026</p>
+<h1>CHOSEN<br><span>CLOTHING</span></h1>
+<p class="hero-line">Clothes without excess.<br><strong>Only style.</strong></p>
+<a class="hero-shop" href="#shop">SHOP NOW <span>↗</span></a>
+<div class="hero-scroll">SCROLL TO EXPLORE ↓</div>
+</div>
+<div class="hero-model-wrap">
+<div class="hero-halo"></div>
+<img class="hero-mannequin" src="assets/chosen-mannequin.svg" alt="CHOSEN oversized T-shirt and jeans mannequin">
+<div class="hero-product-card">
+<span>01 / NEW DROP</span><strong>240 GSM<br>OVERSIZED TEE</strong><small>₹600</small><a href="#shop">VIEW PRODUCT →</a>
+</div>
+<div class="hero-side-label">240 GSM / PREMIUM COTTON<br>MADE FOR EVERYDAY</div>
+</div>
+</section>
 
-  <main id="home">
-    <section class="hero hero-reference">
-      <img class="hero-reference-image" src="assets/chosen-home-hero.png" alt="Chosen Clothing premium oversized T-shirt and jeans collection" />
-      <div class="hero-copy">
-        <p class="eyebrow">THE NEW CHOSEN / 2026</p>
-        <h1>WEAR YOUR<br><em>OWN WAY.</em></h1>
-        <p class="hero-text">Premium everyday pieces built around clean silhouettes, heavyweight fabrics and effortless comfort.</p>
-        <div class="hero-cta">
-          <a class="button dark" href="#shop">Shop the collection <span>↗</span></a>
-          <a class="text-link" href="#about">Our story →</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-glow"></div>
-        <div class="floating-card card-top">240 GSM<br><strong>HEAVYWEIGHT</strong></div>
-        <div class="model-art">
-          <div class="model-head"></div>
-          <div class="model-body"></div>
-          <div class="model-arm left"></div>
-          <div class="model-arm right"></div>
-          <div class="model-leg l"></div>
-          <div class="model-leg r"></div>
-        </div>
-        <div class="hero-label">CHOSEN / ESSENTIALS<br><span>MADE FOR EVERYDAY</span></div>
-      </div>
-    </section>
+<section class="ticker"><span>CHOSEN CLOTHING</span><i>•</i><span>BUILT IN INDIA</span><i>•</i><span>PREMIUM ESSENTIALS</span><i>•</i><span>WEAR YOUR WAY</span><i>•</i></section>
 
-    <section class="ticker">
-      <div>CHOSEN CLOTHING</div><div>•</div><div>BUILT IN INDIA</div><div>•</div><div>PREMIUM ESSENTIALS</div><div>•</div><div>WEAR YOUR WAY</div><div>•</div>
-    </section>
+<section class="section" id="shop">
+<div class="section-head"><div><p class="eyebrow">THE EDIT</p><h2>New essentials</h2></div>
+<div class="filters" id="filters"><button class="active" data-filter="all">All</button><button data-filter="tops">Tops</button><button data-filter="layers">Layers</button><button data-filter="bottoms">Bottoms</button></div></div>
+<div class="products" id="products"></div>
+</section>
 
-    <section class="section" id="shop">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">THE EDIT</p>
-          <h2>New essentials</h2>
-        </div>
-        <div class="filters" id="filters">
-          <button class="active" data-filter="all">All</button>
-          <button data-filter="tops">Tops</button>
-          <button data-filter="layers">Layers</button>
-          <button data-filter="bottoms">Bottoms</button>
-        </div>
-      </div>
-      <div class="products" id="products"></div>
-    </section>
+<section class="editorial" id="collections">
+<div class="editorial-main"><div class="editorial-copy"><p class="eyebrow">THE HEAVYWEIGHT EDIT</p><h2>Less noise.<br><em>More presence.</em></h2><p>Our signature 240 GSM oversized tee is cut with a relaxed shoulder and structured drape. Designed to become your everyday uniform.</p><a class="button light" href="#shop">Explore oversized →</a></div>
+<div class="editorial-art"><div class="shirt-shape"></div><span>240 GSM</span></div></div>
+<div class="editorial-grid"><div class="tile tile-one"><span>01 / LAYERS</span><strong>Jackets<br>for every day.</strong></div><div class="tile tile-two"><span>02 / BOTTOMS</span><strong>Relaxed<br>by design.</strong></div><div class="tile tile-three"><span>03 / WOMEN</span><strong>Clean.<br>Confident.</strong></div></div>
+</section>
 
-    <section class="editorial" id="collections">
-      <div class="editorial-main">
-        <div class="editorial-copy">
-          <p class="eyebrow">THE HEAVYWEIGHT EDIT</p>
-          <h2>Less noise.<br><em>More presence.</em></h2>
-          <p>Our signature 240 GSM oversized tee is cut with a relaxed shoulder and a structured drape. Designed to become your everyday uniform.</p>
-          <a class="button light" href="#shop">Explore oversized →</a>
-        </div>
-        <div class="editorial-art">
-          <div class="shirt-shape"></div>
-          <span>240 GSM</span>
-        </div>
-      </div>
-      <div class="editorial-grid">
-        <div class="tile tile-one"><span>01 / LAYERS</span><strong>Jackets<br>for every day.</strong></div>
-        <div class="tile tile-two"><span>02 / BOTTOMS</span><strong>Relaxed<br>by design.</strong></div>
-        <div class="tile tile-three"><span>03 / WOMEN</span><strong>Clean.<br>Confident.</strong></div>
-      </div>
-    </section>
+<section class="manifesto" id="about"><p class="eyebrow">WHY CHOSEN</p><h2>Clothes that don't<br>need to <em>shout.</em></h2><p>Chosen is built around a simple idea: make clothing that feels premium, looks intentional and works with your life. No unnecessary noise. Just strong silhouettes, comfortable fabrics and details that last.</p><div class="manifesto-stats"><div><strong>01</strong><span>Premium<br>fabrics</span></div><div><strong>02</strong><span>Clean<br>silhouettes</span></div><div><strong>03</strong><span>Made for<br>everyday</span></div></div></section>
 
-    <section class="manifesto" id="about">
-      <p class="eyebrow">WHY CHOSEN</p>
-      <h2>Clothes that don't<br>need to <em>shout.</em></h2>
-      <p>Chosen is built around a simple idea: make clothing that feels premium, looks intentional and works with your life. No unnecessary noise. Just strong silhouettes, comfortable fabrics and details that last.</p>
-      <div class="manifesto-stats">
-        <div><strong>01</strong><span>Premium<br>fabrics</span></div>
-        <div><strong>02</strong><span>Clean<br>silhouettes</span></div>
-        <div><strong>03</strong><span>Made for<br>everyday</span></div>
-      </div>
-    </section>
+<section class="newsletter" id="contact"><div><p class="eyebrow">STAY CHOSEN</p><h2>First access.<br>Nothing extra.</h2></div><form id="newsletterForm"><input type="email" placeholder="Your email address" required><button class="button dark" type="submit">Join the list ↗</button><small id="formMessage"></small></form></section>
+</main>
 
-    <section class="newsletter" id="contact">
-      <div>
-        <p class="eyebrow">STAY CHOSEN</p>
-        <h2>First access.<br>Nothing extra.</h2>
-      </div>
-      <form id="newsletterForm">
-        <input type="email" placeholder="Your email address" required />
-        <button class="button dark" type="submit">Join the list ↗</button>
-        <small id="formMessage"></small>
-      </form>
-    </section>
-  </main>
+<footer><div class="footer-top"><div><a class="brand" href="#home">CHOSEN<span>®</span></a><p>Premium everyday clothing.<br>Made for your way.</p></div><div><h4>Shop</h4><a href="#shop">All products</a><a href="#shop">T-shirts</a><a href="#shop">Hoodies</a><a href="#shop">Jackets</a></div><div><h4>Help</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Size guide</a><a href="#contact">Contact</a></div><div><h4>Follow</h4><a href="#">Instagram</a><a href="#">WhatsApp</a><a href="#">Pinterest</a></div></div><div class="footer-bottom"><span>© 2026 CHOSEN CLOTHING</span><span>Independent online store</span></div></footer>
 
-  <footer>
-    <div class="footer-top">
-      <div><a class="brand" href="#home">CHOSEN<span>®</span></a><p>Premium everyday clothing.<br>Made for your way.</p></div>
-      <div><h4>Shop</h4><a href="#shop">All products</a><a href="#shop">T-shirts</a><a href="#shop">Hoodies</a><a href="#shop">Jackets</a></div>
-      <div><h4>Help</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Size guide</a><a href="#">Contact</a></div>
-      <div><h4>Follow</h4><a href="#">Instagram</a><a href="#">WhatsApp</a><a href="#">Pinterest</a></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 CHOSEN CLOTHING</span><span>Independent online store</span></div>
-  </footer>
-
-  <div class="overlay" id="overlay"></div>
-  <aside class="cart-drawer" id="cartDrawer">
-    <div class="drawer-head"><h3>Your bag</h3><button id="closeCart">×</button></div>
-    <div id="cartItems" class="cart-items"><p class="empty">Your bag is empty.</p></div>
-    <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
-    <button class="button dark full" id="checkoutBtn">Proceed to checkout</button>
-    <p class="checkout-note">Demo checkout — connect your payment gateway before launch.</p>
-  </aside>
-
-  <div class="search-panel" id="searchPanel">
-    <button class="close-search" id="closeSearch">×</button>
-    <p class="eyebrow">SEARCH CHOSEN</p>
-    <input id="searchInput" placeholder="Search products..." autofocus />
-    <div id="searchResults"></div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><h3>Your bag</h3><button id="closeCart">×</button></div><div id="cartItems" class="cart-items"><p class="empty">Your bag is empty.</p></div><div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="button dark full" id="checkoutBtn">Proceed to checkout</button><p class="checkout-note">Demo checkout — connect your payment gateway before launch.</p></aside>
+<div class="search-panel" id="searchPanel"><button class="close-search" id="closeSearch">×</button><p class="eyebrow">SEARCH CHOSEN</p><input id="searchInput" placeholder="Search products..." autofocus><div id="searchResults"></div></div>
+<script src="script.js"></script>
+</body></html>
