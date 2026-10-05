@@ -17,9 +17,7 @@ function money(n){ return "₹" + n.toLocaleString("en-IN"); }
 
 function productCard(p){
   return `<article class="product">
-    <div class="product-image">
-      <div class="garment ${p.art}"></div>
-    </div>
+    <div class="product-image">${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : `<div class="garment ${p.art}"></div>`}</div>
     <div class="product-info">
       <div class="product-cat">${p.label}</div>
       <div class="product-meta"><span class="product-name">${p.name}</span><span class="price">${money(p.price)}</span></div>
